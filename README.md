@@ -1,6 +1,6 @@
 # Tableau_project
 
-Teckstack will be on : Python, Javascript, SQL , MySQL , Hadoop , Kafka and confluence 
+Teckstack will be on : Python, Json , Tableau API , TableauServerClient , Shell, Autosys , JIL  
 
 This repository is to show developers on the end to end development <br>
 1 ) This will enable developers to fetch data from CLOUD AWS and store in real time streaming in datahouse<br>
