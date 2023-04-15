@@ -1,0 +1,100 @@
+/*****  VM - DEV PUBLISH REPORT TO Citiftpreportbatch | Box declaration  *****/
+
+insert_job: 1166122_DCFTP_TBRP_ADHOC_BOX    job_type: box
+description: 166122_DCFTP_TBRP_ADHOC_BOX
+owner: citiftptabhyper
+alarm_if_fail: n
+alarm_if_terminated: y
+timezone: UTC
+send_notification: n
+
+
+/*******  VM - DEV PUBLISH REPORT TO Citiftpreportbatch *******/
+
+insert_job: 166122_DCFTP_TBRP_PUBLISH_SERVICE    job_type: cmd
+description: 166122_DCFTP_TBRP_PUBLISH_SERVICE
+machine: sd-nzvp-czog.nam.nsroot.net
+owner: citiftptabhyper
+box_name: 1166122_DCFTP_TBRP_ADHOC_BOX
+envvars: RPM_ENVIRONMENT="DEV"
+alarm_if_fail: y
+alarm_if_terminated: y
+timezone: UTC
+profile: /citiftp/reporting/temp/publish_env.profile
+send_notification: n
+std_out_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.out
+std_err_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.err
+command: /citiftp/reporting/temp/publish_service.profile
+
+
+
+/******* SIT ENV - Publish *******/
+insert_job: 166122_SCFTP_TBRP_PUBLISH_SERVICE    job_type: cmd
+description: 166122_SCFTP_TBRP_PUBLISH_SERVICE
+machine: sd-nzvp-czog.nam.nsroot.net
+owner: citiftptabhyper
+box_name: 1166122_DCFTP_TBRP_ADHOC_BOX
+envvars: RPM_ENVIRONMENT="SIT"
+alarm_if_fail: y
+alarm_if_terminated: y
+timezone: UTC
+profile: /citiftp/reporting/temp/publish_env.profile
+send_notification: n
+std_out_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.out
+std_err_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.err
+command: /citiftp/reporting/temp/publish_service.profile
+
+
+/******* SIT2 ENV - Publish *******/
+
+insert_job: 166122_S2CFTP_TBRP_PUBLISH_SERVICE    job_type: cmd
+description: 166122_S2CFTP_TBRP_PUBLISH_SERVICE
+machine: sd-nzvp-czog.nam.nsroot.net
+owner: citiftptabhyper
+box_name: 1166122_DCFTP_TBRP_ADHOC_BOX
+envvars: RPM_ENVIRONMENT="SIT2"
+alarm_if_fail: y
+alarm_if_terminated: y
+timezone: UTC
+profile: /citiftp/reporting/temp/publish_env.profile
+send_notification: n
+std_out_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.out
+std_err_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.err
+command: /citiftp/reporting/temp/publish_service.profile
+
+
+
+
+/******* SIT3 ENV - Publish *******/
+insert_job: 166122_S3CFTP_TBRP_PUBLISH_SERVICE    job_type: cmd
+description: 166122_S3CFTP_TBRP_PUBLISH_SERVICE
+machine: sd-nzvp-czog.nam.nsroot.net
+owner: citiftptabhyper
+box_name: 1166122_DCFTP_TBRP_ADHOC_BOX
+envvars: RPM_ENVIRONMENT="SIT3"
+alarm_if_fail: y
+alarm_if_terminated: y
+timezone: UTC
+profile: /citiftp/reporting/temp/publish_env.profile
+send_notification: n
+std_out_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.out
+std_err_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.err
+command: /citiftp/reporting/temp/publish_service.profile
+
+
+
+/******* SIT4 ENV - Publish *******/
+insert_job: 166122_S4CFTP_TBRP_PUBLISH_SERVICE    job_type: cmd
+description: 166122_S3CFTP_TBRP_PUBLISH_SERVICE
+machine: sd-nzvp-czog.nam.nsroot.net
+owner: citiftptabhyper
+box_name: 1166122_DCFTP_TBRP_ADHOC_BOX
+envvars: RPM_ENVIRONMENT="SIT4"
+alarm_if_fail: y
+alarm_if_terminated: y
+timezone: UTC
+profile: /citiftp/reporting/temp/publish_env.profile
+send_notification: n
+std_out_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.out
+std_err_file: /tmp/${AUTO_JOB_NAME}.${AUTORUN}.err
+command: /citiftp/reporting/temp/publish_service.profile
